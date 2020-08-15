@@ -72,7 +72,7 @@ const App = () => {
   return (
     <StyledApp>
       <header className="App-header">
-        <h2>React { isOnline ? 'Online' : 'Offline' } Hook demo</h2>
+        <h2>React <span data-cy="online-status-indicator">{ isOnline ? 'Online' : 'Offline' }</span> Hook demo</h2>
         <img src={logo} className="App-logo" alt="logo" />
         <ReturnValuesTableStyled>
           <thead>
@@ -90,7 +90,7 @@ const App = () => {
             <td className="left spaced">
               isOnline
             </td>
-            <td>
+            <td data-cy="isOnline-value">
               { isOnline.toString() }
             </td>
           </tr>
@@ -98,7 +98,7 @@ const App = () => {
             <td className="left spaced">
               isAssumedStatus
             </td>
-            <td>
+            <td data-cy="isAssumedStatus-value">
               { isAssumedStatus.toString() }
             </td>
           </tr>
